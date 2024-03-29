@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Management Software</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e9e5e5;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #c0bcbc;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: calc(100% - 22px); /* Adjusted width to accommodate border and padding */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Institute Management Software</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#student">Student Information</a></li>
+        <li><a href="#admissions">Admissions & Enrollment</a></li>
+        <li><a href="#classroom">Classroom & Schedule</a></li>
+        <li><a href="#staff">Staff Management</a></li>
+        <li><a href="#fee">Fee Management</a></li>
+        <li><a href="#library">Library Management</a></li>
+    </ul>
+</nav>
+<section id="student">
+    <h2>Student Information Management</h2>
+    <p>Welcome to the Student Information Management section. Here, you can manage all information related to students enrolled in our institute.</p>
+    <h3>Add New Student</h3>
+    <form action="#" method="post">
+        <label for="student_name">Name:</label>
+        <input type="text" id="student_name" name="student_name" required><br>
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br>
+        <label for="student_dob">Date of Birth:</label>
+        <input type="date" id="student_dob" name="student_dob" required><br>
+        <label for="student_email">Email:</label>
+        <input type="email" id="student_email" name="student_email" required><br>
+        <input type="submit" value="Add Student">
+    </form>
+    <h3>Student List</h3>
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>123456</td>
+            <td>John Doe</td>
+            <td>1999-05-15</td>
+            <td>john.doe@example.com</td>
+        </tr>
+    </table>
+</section>
+<section id="admissions">
+    <h2>Admissions & Enrollment Management</h2>
+    <p>Welcome to the Admissions & Enrollment Management section. Here, you can manage the admissions process and enroll students into various programs offered by our institute.</p>
+    <h3>Admission Form</h3>
+    <form action="#" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required><br>
+        <label for="program">Program:</label>
+        <select id="program" name="program" required>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business Administration">Business Administration</option>
+            <option value="Engineering">Engineering</option>
+        </select><br>
+        <label for="enrollment_date">Enrollment Date:</label>
+        <input type="date" id="enrollment_date" name="enrollment_date" required><br>
+        <label for="course_level">Course Level:</label>
+        <input type="radio" id="course_level_undergraduate" name="course_level" value="Undergraduate" required>
+        <label for="course_level_undergraduate">Undergraduate</label>
+        <input type="radio" id="course_level_postgraduate" name="course_level" value="Postgraduate" required>
+        <label for="course_level_postgraduate">Postgraduate</label><br>
+        <input type="submit" value="Submit Admission Form">
+    </form>
+    <h3>Enrollment Status</h3>
+    <p>Number of enrolled students: 100</p>
+    <p>Admission status: Open</p>
+</section>
+<section id="classroom">
+    <h2>Classroom & Schedule Management</h2>
+    <p>Welcome to the Classroom & Schedule Management section. Here, you can manage the allocation of classrooms and schedules for various courses and classes.</p>
+    <h3>Allocate Classroom</h3>
+    <form action="#" method="post">
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business Administration">Business Administration</option>
+            <option value="Engineering">Engineering</option>
+        </select><br>
+        <label for="classroom">Classroom:</label>
+        <input type="text" id="classroom" name="classroom" required><br>
+        <label for="schedule">Schedule:</label>
+        <input type="text" id="schedule" name="schedule" placeholder="e.g., Mon 09:00 AM - 11:00 AM" required><br>
+        <input type="submit" value="Allocate Classroom">
+    </form>
+    <h3>Class Schedule</h3>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Classroom</th>
+            <th>Schedule</th>
+        </tr>
+        <tr>
+            <td>Computer Science</td>
+            <td>Room 101</td>
+            <td>Mon 09:00 AM - 11:00 AM</td>
+        </tr>
+    </table>
+</section>
+<section id="staff">
+    <h2>Staff Management</h2>
+    <p>Welcome to the Staff Management section. Here, you can manage information about the staff members working at our institute.</p>
+    <h3>Add New Staff Member</h3>
+    <form action="#" method="post">
+        <label for="staff_name">Name:</label>
+        <input type="text" id="staff_name" name="staff_name" required><br>
+        <label for="staff_role">Role:</label>
+        <select id="staff_role" name="staff_role" required>
+            <option value="Teacher">Teacher</option>
+            <option value="Administrator">Administrator</option>
+            <option value="Librarian">Librarian</option>
+            <!-- Add more options for other roles -->
+        </select><br>
+        <label for="staff_email">Email:</label>
+        <input type="email" id="staff_email" name="staff_email" required><br>
+        <input type="submit" value="Add Staff">
+    </form>
+    <h3>Staff List</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>Teacher</td>
+            <td>john.doe@example.com</td>
+        </tr>
+    </table>
+</section>
+<section id="fee">
+    <h2>Fee Management</h2>
+    <p>Welcome to the Fee Management section. Here, you can manage the fees for various courses and track payments made by students.</p>
+    <h3>Set Course Fees</h3>
+    <form action="#" method="post">
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business Administration">Business Administration</option>
+            <option value="Engineering">Engineering</option>
+        </select><br>
+        <label for="fee_amount">Fee Amount:</label>
+        <input type="text" id="fee_amount" name="fee_amount" required><br>
+        <input type="submit" value="Set Course Fee">
+    </form>
+    <h3>Fee Payment Status</h3>
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Fee Amount</th>
+            <th>Payment Status</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>Computer Science</td>
+            <td>$1000</td>
+            <td>Paid</td>
+        </tr>
+    </table>
+</section>
+<section id="library">
+    <h2>Library Management</h2>
+    <p>Welcome to the Library Management section. Here, you can manage the library resources, issue books to students, and track book returns.</p>
+    <h3>Add New Book</h3>
+    <form action="#" method="post">
+        <label for="book_title">Title:</label>
+        <input type="text" id="book_title" name="book_title" required><br>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br>
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn" required><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br>
+        <input type="submit" value="Add Book">
+    </form>
+    <h3>Book List</h3>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Available Quantity</th>
+        </tr>
+        <tr>
+            <td>Introduction to Algorithms</td>
+            <td>Thomas H. Cormen</td>
+            <td>9780262032933</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <h3>Issue Book</h3>
+    <form action="#" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required><br>
+        <label for="book">Book:</label>
+        <select id="book" name="book" required>
+            <option value="Introduction to Algorithms">Introduction to Algorithms</option>
+        </select><br>
+        <input type="submit" value="Issue Book">
+    </form>
+    <h3>Return Book</h3>
+    <form action="#" method="post">
+        <label for="student_name_return">Student Name:</label>
+        <input type="text" id="student_name_return" name="student_name_return" required><br>
+        <label for="book_return">Book:</label>
+        <select id="book_return" name="book_return" required>
+            <option value="Introduction to Algorithms">Introduction to Algorithms</option>
+        </select><br>
+        <input type="submit" value="Return Book">
+    </form>
+</section>
+<footer>
+    <p>&copy; 2024 Institute Management Software</p>
+</footer>
+</body>
+</html>
+1
